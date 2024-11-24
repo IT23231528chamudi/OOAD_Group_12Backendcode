@@ -1,0 +1,9 @@
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\controller\ProductController.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\dto\ProductRequest.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\dto\ProductResponse.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\entity\Products.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\repository\ProductRepository.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\service\impl\ProductServiceImpl.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\service\ProductService.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\persistence\service\UserService.java
+D:\SLIIT\splendorlux\src\main\java\com\example\splendorlux\SplendorluxApplication.java

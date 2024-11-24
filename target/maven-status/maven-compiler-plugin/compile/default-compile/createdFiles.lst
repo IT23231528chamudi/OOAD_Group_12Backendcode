@@ -1,0 +1,8 @@
+com\example\splendorlux\persistence\dto\ProductResponse.class
+com\example\splendorlux\persistence\dto\ProductRequest.class
+com\example\splendorlux\persistence\service\UserService.class
+com\example\splendorlux\controller\ProductController.class
+com\example\splendorlux\persistence\entity\Products.class
+com\example\splendorlux\persistence\service\ProductService.class
+com\example\splendorlux\SplendorluxApplication.class
+com\example\splendorlux\persistence\repository\ProductRepository.class
