@@ -37,7 +37,7 @@ public class ProductServiceImpl implements ProductService {
 
         // Assuming Category ID is passed in the request, fetch the Category from the DB
         Categories category = categoryRepository.findById(productRequest.getCategoryID())
-                .orElseThrow(() -> new RuntimeException("Category not found"));
+        .orElseThrow(() -> new RuntimeException("Category not found"));
         product.setCategory(category);
 
 
