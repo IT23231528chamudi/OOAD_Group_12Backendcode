@@ -6,4 +6,5 @@ import com.example.splendorlux.persistence.dto.SalesRequest;
 
 public interface PaymentService {
     PaymentResponse processPayment(PaymentRequest paymentRequest);
+    PaymentResponse processCartPayment(PaymentRequest paymentRequest);
 }

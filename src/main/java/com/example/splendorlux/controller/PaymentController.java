@@ -20,4 +20,15 @@ public class PaymentController {
         PaymentResponse paymentResponse = paymentService.processPayment(paymentRequest);
         return ResponseEntity.ok(paymentResponse);
     }
+
+    @PostMapping("/process-cart-payment")
+    public ResponseEntity<PaymentResponse> processCartPayment(@RequestBody PaymentRequest paymentRequest) {
+        if (paymentRequest.getCartId() == null) {
+            return ResponseEntity.badRequest().body(null);
+        }
+
+        PaymentResponse response = paymentService.processCartPayment(paymentRequest);
+        return ResponseEntity.ok(response);
+    }
+
 }

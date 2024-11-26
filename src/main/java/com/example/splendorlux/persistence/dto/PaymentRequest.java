@@ -11,6 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PaymentRequest {
+    private Long cartId;
     private Long salesId;
     private String payerId;
     private String paymentStatus;
