@@ -77,6 +77,29 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<ProductResponse> searchProductsByName(String name) {
+        // Fetch products from the repository using a custom query
+        List<Products> products = productRepository.findByProductNameContainingIgnoreCase(name);
+
+        // Map products to ProductResponse DTO
+        return products.stream()
+                .map(product -> modelMapper.map(product, ProductResponse.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductResponse> getProductsByCategoryId(Long categoryId) {
+        // Fetch products by category ID
+        List<Products> products = productRepository.findByCategory_CategoryId(categoryId);
+
+        // Map products to ProductResponse DTO
+        return products.stream()
+                .map(product -> modelMapper.map(product, ProductResponse.class))
+                .collect(Collectors.toList());
+    }
+
+
+    @Override
     public void deleteProduct(Long productID) {
         // Delete the product by its ID
         productRepository.deleteById(productID);
@@ -94,6 +117,14 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductResponse> getAllProducts() {
         // Get all products and map them to ProductResponse DTO
         List<Products> products = productRepository.findAll();
+        return products.stream()
+                .map(product -> modelMapper.map(product, ProductResponse.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductResponse> getLatestProducts() {
+        List<Products> products = productRepository.findTop4ByOrderByProductIDDesc();
         return products.stream()
                 .map(product -> modelMapper.map(product, ProductResponse.class))
                 .collect(Collectors.toList());

@@ -44,4 +44,19 @@ public class ProductController {
     public ResponseEntity<List<ProductResponse>> getAllProducts() {
         return ResponseEntity.ok(productService.getAllProducts());
     }
+
+    @GetMapping("/search")
+    public List<ProductResponse> searchProductsByName(@RequestParam("name") String name) {
+        return productService.searchProductsByName(name);
+    }
+
+    @GetMapping("/category/{id}")
+    public List<ProductResponse> getProductsByCategoryId(@PathVariable("id") Long categoryId) {
+        return productService.getProductsByCategoryId(categoryId);
+    }
+
+    @GetMapping("/latest")
+    public List<ProductResponse> getLatestProducts() {
+        return productService.getLatestProducts();
+    }
 }
